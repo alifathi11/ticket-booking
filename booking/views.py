@@ -4,8 +4,8 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
-from booking.models import Booking
-from booking.serializers import BookingSerializer
+from booking.models import Booking, Payment
+from booking.serializers import BookingSerializer, PaymentSerializer
 from config.pagination import Pagination
 
 
@@ -38,3 +38,17 @@ class CancelBookingView(APIView):
             return Response({"detail": "Booking not found"}, status=status.HTTP_404_NOT_FOUND)
 
 
+
+class PaymentView(generics.CreateAPIView):
+    serializer_class = PaymentSerializer
+    permission_classes = [permissions.IsAuthenticated]
+
+
+
+class PaymentHistoryView(generics.ListAPIView):
+    serializer_class = PaymentSerializer
+    permission_classes = [permissions.IsAuthenticated]
+
+
+    def get_queryset(self):
+        return Payment.objects.filter(user=self.request.user)
