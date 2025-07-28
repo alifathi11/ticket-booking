@@ -6,10 +6,12 @@ from rest_framework.views import APIView
 
 from booking.models import Booking
 from booking.serializers import BookingSerializer
+from config.pagination import Pagination
 
 
 class BookTicketView(generics.CreateAPIView):
     serializer_class = BookingSerializer
+    pagination_class = Pagination
     permission_classes = [permissions.IsAuthenticated]
 
     def get_queryset(self):

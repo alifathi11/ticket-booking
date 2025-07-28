@@ -15,4 +15,4 @@ class Transport(models.Model):
     price = models.DecimalField(max_digits=10, decimal_places=2)
 
     def __str__(self):
-        return f"{self.transport_type.name} from {self.origin} to {self.destination}"
+        return f"{self.transport_type} from {self.origin} to {self.destination}"
