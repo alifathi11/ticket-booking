@@ -21,9 +21,10 @@ class BookTicketView(generics.CreateAPIView):
 class MyBookingsView(generics.ListAPIView):
     serializer_class = BookingSerializer
     permission_classes = [permissions.IsAuthenticated]
+    pagination_class = Pagination
 
     def get_queryset(self):
-        return Booking.objects.filter(user=self.request.user)
+        return Booking.objects.filter(user=self.request.user).order_by('-transport__departure_time')
 
 
 class CancelBookingView(APIView):
@@ -48,6 +49,7 @@ class PaymentView(generics.CreateAPIView):
 class PaymentHistoryView(generics.ListAPIView):
     serializer_class = PaymentSerializer
     permission_classes = [permissions.IsAuthenticated]
+    pagination_class = Pagination
 
 
     def get_queryset(self):

@@ -4,6 +4,7 @@ from datetime import datetime
 from rest_framework import serializers
 
 from booking.models import Booking, Passenger, Payment
+from transport.serializers import TransportSerializer
 
 
 class PassengerSerializer(serializers.ModelSerializer):
@@ -14,10 +15,12 @@ class PassengerSerializer(serializers.ModelSerializer):
 
 class BookingSerializer(serializers.ModelSerializer):
     passenger = PassengerSerializer(read_only=True)
+    transport = TransportSerializer(read_only=True)
 
     class Meta:
         model = Booking
         fields = ['id', 'transport', 'seat_number', 'booking_date', 'passenger', 'is_paid']
+        read_only_fields = ['is_paid', 'user']
 
     def validate(self, data):
         transport = data.get('transport')
