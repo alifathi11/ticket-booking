@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e65599a8-749a-44dd-ac87-c0dc37c87873" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ticket_booking.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking/migrations/0002_passenger_booking_passenger_payment.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking/migrations/0003_booking_is_paid.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking/migrations/0004_payment_user.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking/serializers.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/asgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/pagination.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/settings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/wsgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pytest.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/transport/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/transport/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/transport/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/transport/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/transport/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/transport/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/transport/serializers.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/transport/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/transport/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/transport/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/serializers.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/views.py" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="30SstEwcaRf82m1XyFHr2NppinJ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python tests.Python tests for test_auth.test_registration_user_exists.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_auth.test_user_registration.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_transport.test_transport_list_requires_auth.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/ticket_booking&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;F:\\ticket_booking\\front\\ticket_booking_front\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\ticket_booking\users" />
+      <recent name="F:\ticket_booking\transport" />
+      <recent name="F:\ticket_booking\config" />
+      <recent name="F:\ticket_booking\ticket_booking\booking" />
+      <recent name="F:\ticket_booking\ticket_booking\transport" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\ticket_booking\users" />
+      <recent name="F:\ticket_booking\transport" />
+      <recent name="F:\ticket_booking\booking" />
+      <recent name="F:\ticket_booking" />
+      <recent name="F:\ticket_booking\ticket_booking\users" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Python tests for transport.tests" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="ticket_booking" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/transport/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;transport.tests&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for users.tests.test_registration_user_exists" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="ticket_booking" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/users/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;users.tests.test_registration_user_exists&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for users.tests.test_user_registration" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="ticket_booking" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/users/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;users.tests.test_user_registration&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-6a121458b545-JavaScript-WS-251.25410.117" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e65599a8-749a-44dd-ac87-c0dc37c87873" name="Changes" comment="" />
+      <created>1753632521393</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1753632521393</updated>
+      <workItem from="1753971603172" duration="1212000" />
+      <workItem from="1753972842690" duration="393000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
