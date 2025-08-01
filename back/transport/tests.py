@@ -6,7 +6,7 @@ from pytest_django.fixtures import client
 from rest_framework.test import APIClient
 from django.contrib.auth import get_user_model
 
-from transport.models import Transport
+from back.transport.models import Transport
 
 @pytest.mark.django_db
 def test_transport_list():

@@ -4,8 +4,8 @@ import pytest
 from django.contrib.auth import get_user_model
 from rest_framework.test import APIClient
 
-from booking.models import Booking, Passenger
-from transport.models import Transport
+from back.booking.models import Booking, Passenger
+from back.transport.models import Transport
 
 
 @pytest.mark.django_db
