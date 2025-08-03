@@ -1,10 +1,13 @@
 from datetime import datetime
-
+from django.utils import timezone
 
 from rest_framework import serializers
 
 from booking.models import Booking, Passenger, Payment
+
 from transport.serializers import TransportSerializer
+
+from transport.models import Transport
 
 
 class PassengerSerializer(serializers.ModelSerializer):
@@ -14,8 +17,8 @@ class PassengerSerializer(serializers.ModelSerializer):
 
 
 class BookingSerializer(serializers.ModelSerializer):
-    passenger = PassengerSerializer(read_only=True)
-    transport = TransportSerializer(read_only=True)
+    passenger = PassengerSerializer()
+    transport = serializers.PrimaryKeyRelatedField(queryset=Transport.objects.all())
 
     class Meta:
         model = Booking
@@ -25,7 +28,7 @@ class BookingSerializer(serializers.ModelSerializer):
     def validate(self, data):
         transport = data.get('transport')
 
-        if transport.departure_time < datetime.now():
+        if transport.departure_time < timezone.now():
             raise serializers.ValidationError("Cannot book past trips.")
 
         if Booking.objects.filter(transport=transport, seat_number=data['seat_number']).exists():
@@ -36,20 +39,28 @@ class BookingSerializer(serializers.ModelSerializer):
     def create(self, validated_data):
         passenger_data = validated_data.pop('passenger')
         passenger = Passenger.objects.create(**passenger_data)
+        user=self.context['request'].user
+
         booking = Booking.objects.create(
-            user=self.context['request'].user,
+            user=user,
             passenger=passenger,
             **validated_data
         )
 
         Payment.objects.create(
+            user=user,
             booking=booking,
             amount=validated_data['transport'].price,
             payment_method='card',
-            payment_status=['pending']
+            payment_status='pending'
         )
 
         return booking
+
+    def to_representation(self, instance):
+        rep = super().to_representation(instance)
+        rep['transport'] = TransportSerializer(instance.transport).data
+        return rep
 
 
 class PaymentSerializer(serializers.ModelSerializer):

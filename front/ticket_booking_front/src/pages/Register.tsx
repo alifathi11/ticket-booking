@@ -1,4 +1,4 @@
-import { useState } from "react";
+import {type FormEvent, useState} from "react";
 import api from "../services/api.ts";
 import type {AxiosError} from "axios";
 
@@ -11,7 +11,7 @@ function Register() {
     const [error, setError] = useState('');
     const [success, setSuccess] = useState('');
 
-    const handleRegister = async (e: React.FormEvent) => {
+    const handleRegister = async (e: FormEvent) => {
         e.preventDefault();
         setError('');
         setSuccess('');

@@ -30,7 +30,6 @@ function Transport() {
     useEffect(() => {
         axios.get("http://localhost:8000/api/transport/")
             .then((res => {
-                console.log("Transport response:", res.data);
                 setTransports(res.data.results);
                 setLoading(false)
             }))
@@ -54,7 +53,7 @@ function Transport() {
                     <p className="text-center font-bold">Arrival time: {dayjs(transport.arrival_time).format("MMMM D, YYYY, HH:mm")}</p>
                     <p className="text-center font-bold mt-10">Price: {transport.price}$</p>
                     <button
-                        className="border-2 border-amber-900 rounded-xl bg-white p-4 mt-3 cursor-pointer hover:bg-yellow-100"
+                        className="border-2 border-amber-900 rounded-xl bg-white p-4 mt-3 cursor-pointer hover:bg-yellowcd-100"
                         onClick={bookTransport(transport)}>
                         Book now!
                     </button>

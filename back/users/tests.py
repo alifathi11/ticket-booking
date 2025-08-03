@@ -20,6 +20,7 @@ def test_user_registration():
         'password': 'testpass123'
     })
 
+
     assert response.status_code == 200
     assert 'access' in response.data
     assert 'refresh' in response.data

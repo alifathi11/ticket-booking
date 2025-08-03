@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import {type FormEvent, useState} from 'react';
 import api from "../services/api.ts";
 import type {AxiosError} from "axios";
 
@@ -7,13 +7,13 @@ function Login() {
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
 
-    const handleLogin = async (e: React.FormEvent) => {
+    const handleLogin = async (e:FormEvent) => {
         e.preventDefault();
         setError('');
         
         try {
             const response = await api.post('/token/', { username, password });
-            const token = response.data.token;
+            const token = response.data.access;
             localStorage.setItem('token', token);
 
             window.location.href = '/transport';

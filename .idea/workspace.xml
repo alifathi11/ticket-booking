@@ -6,15 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="e65599a8-749a-44dd-ac87-c0dc37c87873" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/booking/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/back/booking/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/booking/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/back/booking/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/booking/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/back/booking/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/back/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/back/config/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/back/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/back/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/transport/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/back/transport/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/ticket_booking_front/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/ticket_booking_front/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/ticket_booking_front/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/front/ticket_booking_front/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/ticket_booking_front/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/front/ticket_booking_front/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/ticket_booking_front/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/ticket_booking_front/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/users/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/back/users/tests.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/ticket_booking_front/src/output.css" beforeDir="false" afterPath="$PROJECT_DIR$/front/ticket_booking_front/src/output.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/ticket_booking_front/src/pages/Booking.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/ticket_booking_front/src/pages/Booking.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/ticket_booking_front/src/pages/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/ticket_booking_front/src/pages/Login.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/ticket_booking_front/src/pages/Register.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/ticket_booking_front/src/pages/Register.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/ticket_booking_front/src/pages/Transport.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/ticket_booking_front/src/pages/Transport.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/ticket_booking_front/src/router/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/ticket_booking_front/src/router/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,8 +27,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
-        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -48,6 +50,7 @@
     &quot;Python tests.Python tests for test_auth.test_registration_user_exists.executor&quot;: &quot;Run&quot;,
     &quot;Python tests.Python tests for test_auth.test_user_registration.executor&quot;: &quot;Run&quot;,
     &quot;Python tests.Python tests for test_transport.test_transport_list_requires_auth.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.pytest for tests.test_user_registration.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
@@ -77,7 +80,7 @@
       <recent name="F:\ticket_booking\ticket_booking\users" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for transport.tests">
+  <component name="RunManager">
     <configuration name="Python tests for transport.tests" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="ticket_booking" />
       <option name="ENV_FILES" value="" />
@@ -123,11 +126,28 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="pytest for tests.test_user_registration" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="ticket_booking" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/back/users" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;tests.test_user_registration&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-890ed5b35930-d9c5bdb153f4-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-251.23774.444" />
+        <option value="bundled-js-predefined-d6986cc7102b-6a121458b545-JavaScript-WS-251.25410.117" />
       </set>
     </attachedChunks>
   </component>
@@ -144,6 +164,9 @@
       <workItem from="1754038611962" duration="663000" />
       <workItem from="1754056895122" duration="1033000" />
       <workItem from="1754063555066" duration="9190000" />
+      <workItem from="1754085205334" duration="1757000" />
+      <workItem from="1754206669356" duration="4326000" />
+      <workItem from="1754231866651" duration="2862000" />
     </task>
     <servers />
   </component>

@@ -3,6 +3,7 @@ import Login from '../pages/Login';
 import Register from "../pages/Register.tsx";
 import Transport from "../pages/Transport.tsx";
 import BookingWrapper from "../pages/BookingWrapper.tsx";
+import BookingList from "../pages/BookingList.tsx";
 
 
 const AppRouter = () => {
@@ -13,6 +14,7 @@ const AppRouter = () => {
               <Route path="/register" element={<Register />} />
               <Route path="/transport" element={<Transport />} />
               <Route path="/booking/:id" element={<BookingWrapper />} />
+              <Route path="/booking/list" element={<BookingList />} />
           </Routes>
       </Router>
     );

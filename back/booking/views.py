@@ -17,6 +17,14 @@ class BookTicketView(generics.CreateAPIView):
     def get_queryset(self):
         return Booking.objects.filter(user=self.request.user)
 
+    def create(self, request, *args, **kwargs):
+        serializer = self.get_serializer(data=request.data)
+        if not serializer.is_valid():
+            print(serializer.errors)  # 🔍 Log the error
+            return Response(serializer.errors, status=400)
+        self.perform_create(serializer)
+        return Response(serializer.data, status=201)
+
 
 class MyBookingsView(generics.ListAPIView):
     serializer_class = BookingSerializer
