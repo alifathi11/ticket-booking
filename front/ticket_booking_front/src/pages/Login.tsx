@@ -1,11 +1,14 @@
 import {type FormEvent, useState} from 'react';
 import api from "../services/api.ts";
 import type {AxiosError} from "axios";
+import {useNavigate} from "react-router";
 
 function Login() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
+
+    const navigate = useNavigate();
 
     const handleLogin = async (e:FormEvent) => {
         e.preventDefault();
@@ -16,7 +19,7 @@ function Login() {
             const token = response.data.access;
             localStorage.setItem('token', token);
 
-            window.location.href = '/transport';
+            navigate('/');
         } catch (error) {
             const err = error as AxiosError<{ detail?: string }>
             const data = err.response?.data;
