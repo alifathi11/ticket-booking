@@ -67,12 +67,28 @@ class PaymentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Payment
         fields = '__all__'
-        read_only_fields = ('status', 'date', 'user')
+        read_only_fields = ('payment_status', 'date', 'user')
+
+    def validate(self, data):
+        status = data.get('payment_status')
+
+        if status == 'paid':
+            raise serializers.ValidationError("Payment is already paid.")
+
+        booking_id = data.get('booking').id
+        booking = Booking.objects.get(id=booking_id)
+        transport = booking.transport
+
+        if transport.departure_time < timezone.now():
+            booking.delete()
+            raise serializers.ValidationError("Booking is expired.")
+
+        return data
 
 
     def create(self, validated_data):
         validated_data['user'] = self.context['request'].user
-        validated_data['status'] = 'paid'
+        validated_data['payment_status'] = 'paid'
         payment = super().create(validated_data)
 
         booking = payment.booking

@@ -12,14 +12,15 @@ function Login() {
         setError('');
         
         try {
-            const response = await api.post('/token/', { username, password });
+            const response = await api.post('http://localhost:8000/api/token/', { username, password });
             const token = response.data.access;
             localStorage.setItem('token', token);
 
             window.location.href = '/transport';
         } catch (error) {
             const err = error as AxiosError<{ detail?: string }>
-            setError(err.response?.data?.detail || 'Login failed');
+            const data = err.response?.data;
+            setError(data?.detail || 'Login failed');
         }
     }
 

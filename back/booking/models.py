@@ -45,7 +45,6 @@ class Payment(models.Model):
     STATUS_CHOICES = (
         ('pending', 'Pending'),
         ('paid', 'Paid'),
-        ('failed', 'Failed'),
     )
 
     user = models.ForeignKey(User, on_delete=models.CASCADE)

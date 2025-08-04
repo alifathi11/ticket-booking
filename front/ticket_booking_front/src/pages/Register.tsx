@@ -22,7 +22,7 @@ function Register() {
         }
 
         try {
-            await api.post('/register/', { username, email, password});
+            await api.post('http://localhost:8000/api/register/', { username, email, password});
             setSuccess('Registration successful! You can now log in');
         } catch (error) {
             const err = error as AxiosError<{ detail?: string; email?: string[]; username?: string[] }>;

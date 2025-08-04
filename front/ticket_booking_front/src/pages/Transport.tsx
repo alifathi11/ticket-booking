@@ -53,7 +53,8 @@ function Transport() {
                     <p className="text-center font-bold">Arrival time: {dayjs(transport.arrival_time).format("MMMM D, YYYY, HH:mm")}</p>
                     <p className="text-center font-bold mt-10">Price: {transport.price}$</p>
                     <button
-                        className="border-2 border-amber-900 rounded-xl bg-white p-4 mt-3 cursor-pointer hover:bg-yellowcd-100"
+                        className="border-2 border-amber-900 rounded-xl bg-white p-4 mt-3 cursor-pointer
+                        hover:bg-orange-200 focus:outline-none focus:shadow-outline"
                         onClick={bookTransport(transport)}>
                         Book now!
                     </button>

@@ -1,7 +1,6 @@
 import {useEffect, useState} from "react";
 import type {TransportType} from "./Transport.tsx";
-// import {useNavigate} from "react-router";
-import axios from "axios";
+import axios, {type AxiosError} from "axios";
 import dayjs from "dayjs";
 
 type PassengerType = {
@@ -24,7 +23,34 @@ function BookingList() {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState('');
 
-    // const navigate = useNavigate();
+
+    const payFor = (booking: BookingType) => {
+
+        const token = localStorage.getItem("token");
+
+        return async () => {
+            try {
+                await axios.post('http://localhost:8000/api/payment/', {
+                    booking: booking.id,
+                    payment_method: 'wallet',
+                    amount: booking.transport.price
+
+                }, {
+                    headers: {
+                        Authorization: `Bearer ${token}`,
+                        'Content-Type': 'application/json'
+                    }
+                });
+
+                window.location.reload();
+
+            } catch (error) {
+                const err = error as AxiosError<{ detail?: string; email?: string[]; username?: string[] }>;
+                const data = err.response?.data;
+                setError(data?.detail || data?.email?.[0] || data?.username?.[0] || 'Payment failed.');
+            }
+        }
+    }
 
     useEffect(() => {
 
@@ -63,6 +89,17 @@ function BookingList() {
                   <p className="text-center font-bold">Passenger: {booking.passenger.full_name}</p>
                   <p className="text-center font-bold">Seat: {booking.seat_number}</p>
                   <p className="text-center font-bold mt-10">Payment status: {booking.is_paid ? "Paid" : "Pending"}</p>
+                  {
+                      !booking.is_paid
+                      &&
+                      <button
+                          className="rounded-xl p-4 border-2 border-amber-800  bg-white
+                                     hover:bg-green-400 cursor-pointer focus:outline-none
+                                     focus:shadow-outline mt-5"
+                          onClick={payFor(booking)}>
+                          Pay
+                      </button>
+                  }
               </div>
           )}
       </div>
